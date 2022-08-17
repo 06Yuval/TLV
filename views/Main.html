@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="he" dir="rtl" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TLVParking</title>
+	<link rel="stylesheet" href="/lib/alef/stylesheet.css">
+	<link rel="stylesheet" href="/stylesheets/Main.css">
+	<link rel="stylesheet" href="/lib/materialize/0.97.5/materialize.min.css">
+	<script type="text/javascript" src="/lib/jquery/3.0.0/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="/lib/materialize/0.97.5/materialize.js"></script>
+	<script type="text/javascript" src="/js/Main.js"></script>
+	<link rel="stylesheet" href="/lib/iconfont/material-icons.css">
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">&#1504;&#1496;&#1500;&#1497; &#1490;'&#1504;&#1492;</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
+<mso:Order msdt:dt="string">928200.000000000</mso:Order>
+<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+<mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
+<mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">&#1504;&#1496;&#1500;&#1497; &#1490;'&#1504;&#1492;</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010058A668C162E91343BE690CF5FE89C2A3</mso:ContentTypeId>
+<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+	<img src="/images/TLVParking-Logo.png" alt="" class="logo">
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<image xlink:href="/images/map.png" x="0" y="0" height="100%" width="100%"></image>
+	</svg>
+	<ul id="parking-side-nav" class="side-nav">
+		<li>
+			<div class="userView">
+				<img src="/images/navBackground.jpg" class="background">
+			</div>
+		</li>
+		<li><a href="#!" class="subheader">חניה פנויה</a></li>
+		<li><a href="#!"><i class="material-icons material-blue">place</i><i id="exist_address" class="nav_text">address_placeholder</i></a></li>
+		<li><a href="#!"><i class="material-icons material-blue">place</i><i>(<i id="exist_x" class="nav_text">y_placeholder</i>,<i id="exist_y">y_placeholder</i>)</i></a></li>
+		<li><a href="#!"><i class="material-icons material-blue">access_time</i><i id="exist_time" class="nav_text">time_placeholder</i></a></li>
+		<li>
+			<input type="button", onclick="deleteCurrParking()" class="waves-effects waves-light btn red" value="החניה תפוסה" id="deleteParking">
+		</li>
+	</ul>
+	<div id="addModal" class="modal">
+		<div class="modal-content">
+			<h4>הוספת חנייה חדשה</h4>
+			<div class="row">
+				<div class="input-field col s6">
+					<i class="material-icons prefix">place</i>
+					<input type="text" id="newParkingAddress" class="validate">
+					<label for="newParkingAddress">כתובת</label>
+				</div>
+				<div class="input-field col s6">
+					<i class="material-icons prefix">place</i>
+					<input disabled value="" type="text" id="newParkingCoord" class="validate">
+					<label for="newParkingCoord" id="newParkingCoordLabel">מיקום</label>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="modal-action modal-close waves-effect waves-green btn-flat" id="addModalAccept">הוספה</a>
+			<a href="#" class="modal-action modal-close waves-effect waves-red btn-flat" id="addModalCancel">ביטול</a>
+		</div>
+	</div>
+
+	<a href="#" class="btn-floating btn-large wave-effect waves-light red" id="addParking"><i class="material-icons md-36">add</i></a>
+	<a href="#" data-activates="parking-side-nav" class="button-collapse" id="side-nav-toggle"></a>
+
+
+
+</body>
+
+</html>

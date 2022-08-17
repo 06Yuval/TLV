@@ -1,0 +1,123 @@
+svg {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+image {
+	image-rendering: pixelated;
+}
+
+.parking {
+	cursor: pointer;
+}
+
+.side-nav li {
+	padding: 0 !important
+}
+
+.below-picture-nav {
+	background-color: #4285F4;
+	width: 100%;
+	height: 9em;
+}
+
+.btn-floating {
+	bottom: 15px;
+	left: 15px;
+	position: absolute !important;
+}
+
+.side-nav li>a>i,
+.side-nav li>a>i.material-icons {
+	float: right;
+	line-height: 30px;
+	margin: 0 32px 0 0;
+}
+
+.userView {
+	line-height: 30px;
+	overflow: hidden;
+	position: relative;
+	background-color: white;
+}
+
+.side-nav a {
+	height: 38px !important;
+	cursor: initial;
+	pointer-events: none;
+	background-color: white;
+	font-size: 1.1rem !important;
+	font-family: "Alef";
+}
+
+.side-nav li {
+	line-height: 48px;
+}
+
+.material-blue {
+	color: #007BD8;
+}
+
+.subheader {
+	cursor: initial;
+	pointer-events: none;
+	color: rgba(0, 0, 0, 0.54) !important;
+	line-height: 48px !important;
+	margin-top: -0.9em;
+}
+
+.nav_text {
+	width: 11em;
+}
+
+.modal .modal-footer .btn,
+.modal .modal-footer .btn-large,
+.modal .modal-footer .btn-flat {
+	float: left !important;
+}
+
+.input-field label {
+	right: 0.75rem !important;
+}
+
+.input-field .prefix ~ input,
+.input-field .prefix ~ textarea {
+	margin-right: 2.2rem;
+}
+
+.input-field .prefix ~ label {
+	margin-right: 2.2rem;
+}
+
+.input-field .prefix {
+	width: initial !important;
+	line-height: inherit !important;
+}
+
+.row .col {
+	float: right !important;
+}
+
+#newParkingCoordLabel {
+	transform: translateY(-140%);
+	font-size: 0.8rem;
+}
+#deleteParking {
+	bottom: 5em;
+    position: absolute;
+    right: 4.6rem;
+}
+
+.logo {
+	z-index: 900;
+    position: relative;
+    top: 1em;
+    right: 1em;
+}
+
+#newParking {
+	opacity: 0.5;
+}
